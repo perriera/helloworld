@@ -1,15 +1,11 @@
 cmake_minimum_required(VERSION 3.12)
 project(MyProject VERSION 1.0.0)
 
-set(my_list 1 2 3)
-set(target DIRECTORY "${PROJECT_SOURCE_DIR}")
-set_property(
-    ${target}
-    PROPERTY FOO
-    "${my_list}"
-)
+function(do_cmake_good first_arg)
+    message(STATUS "You called the function: ${first_arg}")
+endfunction()
 
-get_property(foo_value ${target} PROPERTY FOO)
-message(STATUS "Value of FOO is ${foo_value}")
-
-
+do_cmake_good(1)
+do_cmake_good(2)
+do_cmake_good(3)
+do_cmake_good(4)
