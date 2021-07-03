@@ -10,4 +10,4 @@ function(do_cmake_good one two three fourth)
   endforeach()
 endfunction()
 
-do_cmake_good(1 2 3 4 5 6 7 8 9)
+do_cmake_good(1 2 3 4 5 6 7 8)
